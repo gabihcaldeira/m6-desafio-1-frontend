@@ -3,7 +3,7 @@ import * as yup from "yup";
 export const schema = yup.object({
   amount: yup
     .number()
-    .min(0, "Deve ser um número positivo")
+    .min(1000, "Deve ser um número maior ou igual a 1000")
     .required("Campo Obrigatório")
     .typeError("Campo Obrigatório"),
   installments: yup

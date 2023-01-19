@@ -15,7 +15,6 @@ interface IContext {
   apiResponse: IApiResponse;
   setApiResponse: Dispatch<SetStateAction<IApiResponse>>;
   days: number[];
-  setDays: Dispatch<SetStateAction<number[]>>;
 }
 
 export const Context = createContext<IContext>({} as IContext);
@@ -24,11 +23,9 @@ const ContextProvider = ({ children }: IProviderProps) => {
   const [apiResponse, setApiResponse] = useState<IApiResponse>(
     {} as IApiResponse
   );
-  const [days, setDays] = useState([1, 15, 30, 90]);
+  const days = [1, 15, 30, 90];
 
-  return (
-    <Context.Provider value={{ apiResponse, setApiResponse, days, setDays }} />
-  );
+  return <Context.Provider value={{ apiResponse, setApiResponse, days }} />;
 };
 
 export default ContextProvider;

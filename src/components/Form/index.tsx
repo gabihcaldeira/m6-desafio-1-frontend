@@ -19,7 +19,10 @@ const Form = () => {
   } = useForm<IApiPostData>({ resolver: yupResolver(schema) });
 
   function handleForm(data: IApiPostData) {
-    calculateTransaction(data).then((res) => setApiResponse(res));
+    calculateTransaction(data).then((res) => {
+      console.log(res);
+      setApiResponse({ ...res });
+    });
   }
 
   return (
@@ -37,8 +40,7 @@ const Form = () => {
             <StyledInput
               type="number"
               step={0.01}
-              min={0}
-              defaultValue={0}
+              min={1000}
               {...register("amount")}
             />
           </div>
@@ -55,7 +57,6 @@ const Form = () => {
               step={1}
               min={0}
               max={12}
-              defaultValue={0}
               {...register("installments")}
             />
           </div>
@@ -71,7 +72,6 @@ const Form = () => {
               type="number"
               step={0.1}
               min={0}
-              defaultValue={0}
               {...register("mdr")}
             />
           </div>
