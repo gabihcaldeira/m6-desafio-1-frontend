@@ -25,7 +25,11 @@ const ContextProvider = ({ children }: IProviderProps) => {
   );
   const days = [1, 15, 30, 90];
 
-  return <Context.Provider value={{ apiResponse, setApiResponse, days }} />;
+  return (
+    <Context.Provider value={{ apiResponse, setApiResponse, days }}>
+      {children}
+    </Context.Provider>
+  );
 };
 
 export default ContextProvider;

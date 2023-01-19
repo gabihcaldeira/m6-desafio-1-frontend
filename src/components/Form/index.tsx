@@ -18,11 +18,9 @@ const Form = () => {
     formState: { errors },
   } = useForm<IApiPostData>({ resolver: yupResolver(schema) });
 
-  function handleForm(data: IApiPostData) {
-    calculateTransaction(data).then((res) => {
-      console.log(res);
-      setApiResponse({ ...res });
-    });
+  async function handleForm(data: IApiPostData) {
+    const response = await calculateTransaction(data);
+    setApiResponse(response);
   }
 
   return (

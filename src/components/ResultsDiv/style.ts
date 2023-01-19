@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ResultContainer = styled.div`
-  width: 161px;
+  width: 200px;
   height: 223px;
 
   > .titleContainer {

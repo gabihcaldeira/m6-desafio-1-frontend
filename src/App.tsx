@@ -1,8 +1,13 @@
 import React from "react";
+import ContextProvider from "./context/context";
 import HomePage from "./pages/homePage";
 
 function App() {
-  return <HomePage />;
+  return (
+    <ContextProvider>
+      <HomePage />;
+    </ContextProvider>
+  );
 }
 
 export default App;

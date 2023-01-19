@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: fit-content;
-  max-width: 650px;
+  max-width: 700px;
   height: fit-content;
   margin: 50px auto;
 
@@ -39,7 +39,7 @@ export const Container = styled.div`
     background-color: var(--color-background-2);
 
     @media (min-width: 768px) {
-      width: 231px;
+      width: 270px;
       padding: 83.5px 35px;
     }
   }
