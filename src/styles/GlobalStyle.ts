@@ -15,6 +15,9 @@ export default createGlobalStyle`
     --color-blue-text: #3D75BB;
     --color-blue-text-2: #5D9CEC;
     --color-error-text: #CECECE;
+
+    --color-error-icon: #ce1a2c;
+    --color-timeout-icon: #e0b109;
     
     --font-family: 'Raleway', sans-serif;
    
@@ -27,7 +30,6 @@ export default createGlobalStyle`
 	font-size: 100%;
   box-sizing: border-box;
   font-family: var(--font-family);
-  color: var(--color-text);
 }
 
 body{

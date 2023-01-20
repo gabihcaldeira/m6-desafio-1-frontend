@@ -5,4 +5,6 @@ export const StyledTitle = styled.h1`
   line-height: 28.13px;
 
   margin-bottom: 22px;
+
+  color: var(--color-text);
 `;

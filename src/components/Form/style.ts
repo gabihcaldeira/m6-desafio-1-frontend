@@ -5,6 +5,7 @@ export const FormContainer = styled.div`
   height: 300px;
 
   background-color: var(--color-background-3);
+  color: var(--color-text);
 
   > .form {
     width: 100%;
